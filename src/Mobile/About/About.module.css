@@ -1,0 +1,40 @@
+@font-face {
+  font-family: journal;
+  src: url(../../assets/fonts/journal.ttf);
+}
+.flexCenter {
+  display: flex;
+  justify-content: center;
+}
+.logo {
+  margin: 1rem;
+  margin-top: 2rem;
+  width: 70%;
+  height: 140px;
+  border-radius: 23px;
+  box-shadow: 3px 3px 5px #00000015;
+  border-radius: 70px;
+  outline: 2px solid var(--beige);
+  box-shadow: 3px 3px 11px var(--beige-shadow);
+}
+.aboutHead {
+  text-indent: 0.7rem;
+  font-family: journal;
+  text-align: center;
+  font-size: 2.4rem;
+  line-height: 1;
+  padding: 1rem 1rem;
+  letter-spacing: 0.1rem;
+  text-align: center;
+}
+.para {
+  font-size: 0.9rem;
+  text-indent: 2rem;
+  padding: 0.7rem 2rem;
+}
+.glass {
+  width: 30%;
+  height: auto;
+  margin: 2rem;
+  filter: contrast(120%);
+}

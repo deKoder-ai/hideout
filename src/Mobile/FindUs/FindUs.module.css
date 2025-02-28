@@ -1,0 +1,47 @@
+@font-face {
+  font-family: dechora;
+  src: url(../../assets/fonts/dechora-zone.ttf);
+}
+.page {
+  width: 100%;
+}
+h1 {
+  margin: 1rem 1rem;
+  font-size: 1.6rem;
+  letter-spacing: 0.1rem;
+  font-family: dechora;
+
+}
+.flex {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+.map {
+  width: 85%;
+  height: 280px;
+  outline: 1px solid var(--red);
+  border-radius: 20px;
+}
+.getDirections {
+  margin: 1.2rem 0rem;
+  padding: 0.3rem 1.5rem;
+  font-family: dechora;
+  color: black;
+  font-size: 1rem;
+  letter-spacing: 0.07rem;
+  background-color: var(--beige);
+  outline: 2px solid var(--red);
+  border-radius: 20px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.322);
+}
+.textCenter {
+  text-align: center;
+}
+.spacer {
+  width: 100%;
+  height: 50px;
+}
