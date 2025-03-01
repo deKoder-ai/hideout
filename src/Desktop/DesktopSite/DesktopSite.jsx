@@ -12,7 +12,7 @@ const DesktopSite = () => {
       <NavBar props={{ page, setPage, language, setLanguage }} />
       {/* {props.sidebar && <LeftBanner />} */}
       <LeftBanner />
-      <Page props={{ page, setPage }} />
+      <Page props={{ page, setPage, language, setLanguage }} />
       <Footer props={{ language, setLanguage }} />
     </>
   );

@@ -1,3 +1,4 @@
+@import './poppins.css';
 @import "leaflet/dist/leaflet.css";
 
 @font-face {
@@ -10,7 +11,7 @@
 }
 
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  /* font-family: system-ui, Avenir, Helvetica, Arial, sans-serif; */
   line-height: 1.5;
   /* font-weight: 400; */
 
@@ -32,9 +33,13 @@
   --textcol: #fffeff;
   --dark: #1b1b1b;
   --invis: #00000000;
+  font-family: poppins, Verdana, sans-serif;
+  font-weight: 400;
 }
 html {
   font-size: 10px;
+  overflow-x: hidden;
+  
 }
 
 a {

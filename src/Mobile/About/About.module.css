@@ -1,13 +1,13 @@
 .logo {
   margin: 1rem;
   margin-top: 2rem;
-  width: 70%;
-  height: 140px;
+  width: 230px;
+  height: auto;
   border-radius: 23px;
   box-shadow: 3px 3px 5px #00000015;
   border-radius: 70px;
   outline: 2px solid var(--beige);
-  box-shadow: 3px 3px 11px var(--beige-shadow);
+  box-shadow: 5px 5px 11px rgba(0, 0, 0, 0.425);
 }
 .aboutHead {
   text-indent: 2rem;

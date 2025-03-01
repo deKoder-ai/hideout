@@ -42,8 +42,10 @@ const NavBar = ({ props }) => {
   const handleLanguageChange = () => {
     if (props.language === 'english') {
       props.setLanguage('thai');
+      setOpenMenu(false);
     } else {
       props.setLanguage('english');
+      setOpenMenu(false);
     }
   };
   return (

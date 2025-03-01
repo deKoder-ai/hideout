@@ -1,13 +1,19 @@
-// import Logo from '../../assets/img/ho-logo-sm.jpg';
-
+import Logo from '../../assets/img/ho-logo-sm.jpg';
+import { useEffect } from 'react';
 import Glass from '../../assets/img/cocktail-glass.svg';
 import styles from './About.module.css';
 
+function SetTitle() {
+  useEffect(() => {
+    document.title = 'HIDEOUT | About';
+  }, []);
+}
 const About = () => {
+  SetTitle();
   return (
     <>
       <div className='flexCenter'>
-        <div className={styles.logo}></div>
+        <img src={Logo} alt='' className={styles.logo} />
       </div>
       <h2 className={styles.aboutHead}>
         Where the city's best kept secret is waiting to be uncovered, and the good times
