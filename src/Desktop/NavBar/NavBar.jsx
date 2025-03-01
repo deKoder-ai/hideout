@@ -52,7 +52,10 @@ const NavBar = ({ props }) => {
         <button className={styles.home} onClick={handleHomeClick}>
           HIDEOUT
         </button>
-        <div className={styles.spacer}>{props.language}</div>
+        <div className={styles.spacer}>
+          {props.language} ||
+          {props.page}
+        </div>
         <button className={styles.navButton} onClick={handleAboutClick}>
           About
         </button>

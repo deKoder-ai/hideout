@@ -2,7 +2,6 @@ import { useState } from 'react';
 import NavBar from '../NavBar/NavBar.jsx';
 import LeftBanner from '../LeftBanner/LeftBanner.jsx';
 import Page from '../Page/Page.jsx';
-import Home from '../Home/Home.jsx';
 import Footer from '../Footer/Footer.jsx';
 
 const DesktopSite = () => {
@@ -11,9 +10,9 @@ const DesktopSite = () => {
   return (
     <>
       <NavBar props={{ page, setPage, language, setLanguage }} />
+      {/* {props.sidebar && <LeftBanner />} */}
       <LeftBanner />
-      <Page />
-      {/* <Home /> */}
+      <Page props={{ page, setPage }} />
       <Footer props={{ language, setLanguage }} />
     </>
   );

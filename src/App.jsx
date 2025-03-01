@@ -10,7 +10,8 @@ import './reset.css';
 
 function App() {
   // let screenWidth = window.innerWidth;
-  const isMobile = useMediaQuery({ maxWidth: 999 });
+  const isMobile = useMediaQuery({ maxWidth: 675 });
+  // const sidebar = useMediaQuery({ minWidth: 1000 });
 
   return isMobile ? <MobileSite /> : <DesktopSite />;
 }
