@@ -1,0 +1,102 @@
+.desktopNav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 50px;
+  background-color: var(--dark);
+  border-bottom: 2px solid var(--beige);
+  display: grid;
+  grid-template-columns: 270px 2fr 1fr 1fr 1fr 55px;
+  z-index: 999999;
+}
+.home {
+  font-family: dechora;
+  font-size: 2.9rem;
+  letter-spacing: 0.25rem;
+  background-color: var(--invis);
+  border-left: 2px solid var(--beige);
+  border-right: 2px solid var(--beige);
+}
+.home:hover,
+.home:focus {
+  color: var(--red);
+  text-decoration: underline;
+  outline: none;
+}
+.spacer {
+  height: 100%;
+  width: 100%;
+}
+.navButton {
+  background-color: var(--invis);
+  font-family: journal;
+  font-size: 2.9rem;
+  letter-spacing: 0.2rem;
+}
+.navButton:hover,
+.navButton:focus {
+  color: var(--red);
+  text-decoration: underline;
+  border-left: 1px solid #ffffff33;
+  border-right: 1px solid #ffffff33;
+  outline: none;
+}
+.burgerButton {
+  width: 55px;
+  height: 48px;
+  border-radius: 0;
+  background-color: var(--dark);
+  background-image: url(../../assets/img/menu-white.svg);
+  background-position: center;
+  background-size: 54%;
+  background-repeat: no-repeat;
+}
+.burgerButton:hover,
+.burgerButton:focus {
+  background-image: url(../../assets/img/menu-red.svg);
+  background-size: 54%;
+  border-left: 1px solid #ffffff33;
+  border-right: 1px solid #ffffff33;
+  outline: none;
+}
+.dropdown {
+  position: fixed;
+  top: 50px;
+  right: 0;
+  width: 210px;
+  border-radius: 0px 0px 0px 11px;
+  background-color: #252525;
+  z-index: 999999;
+  border-left: 1px solid var(--beige);
+  border-bottom: 1px solid var(--beige);
+  box-shadow: -5px 5px 7px #0000009f;
+}
+.dropdownButton {
+  display: block;
+  width: 100%;
+  border-radius: 0;
+  background-color: #ffffff00;
+  border-top: 1px solid rgba(255, 255, 255, 0.144);
+  font-size: 1.6rem;
+  padding: 0.9rem 1.7rem;
+  text-align: left;
+}
+.dropdownButton:last-child {
+  border-radius: 0px 0px 0px 11px;
+}
+.dropdownButton:hover,
+.dropdownButton:focus {
+  background-color: var(--red);
+  box-shadow: 2px 2px 5px #0000007c;
+  outline: none;
+}
+.navMask {
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 100;
+}

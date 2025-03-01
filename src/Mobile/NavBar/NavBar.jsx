@@ -1,7 +1,7 @@
-import { useState } from "react";
-import styles from "./MobileNavBar.module.css";
+import { useState } from 'react';
+import styles from './NavBar.module.css';
 
-const MobileNavBar = ({ props }) => {
+const NavBar = ({ props }) => {
   const [openMenu, setOpenMenu] = useState(false);
 
   const handleDropdownClick = () => {
@@ -12,47 +12,45 @@ const MobileNavBar = ({ props }) => {
     }
   };
   const handleHomeClick = () => {
-    props.setPage("home");
+    props.setPage('home');
     setOpenMenu(false);
   };
   const handleAboutClick = () => {
-    props.setPage("about");
+    props.setPage('about');
     setOpenMenu(false);
   };
   const handleMenuClick = () => {
-    props.setPage("menu");
+    props.setPage('menu');
     setOpenMenu(false);
   };
   const handleFindUsClick = () => {
-    props.setPage("findUs");
+    props.setPage('findUs');
     setOpenMenu(false);
   };
   const handleEventsClick = () => {
-    props.setPage("events");
+    props.setPage('events');
     setOpenMenu(false);
   };
   const handleNewsClick = () => {
-    props.setPage("news");
+    props.setPage('news');
     setOpenMenu(false);
   };
   const handleContactClick = () => {
-    props.setPage("contact");
+    props.setPage('contact');
     setOpenMenu(false);
   };
   return (
-    <nav className={styles.nav}>
+    <nav className={styles.mobileNav}>
       <button className={styles.homeButton} onClick={handleHomeClick}>
         HIDEOUT
       </button>
-      <button
-        className={styles.burgerButton}
-        onClick={handleDropdownClick}
-      ></button>
-      {openMenu && (
-        <div className={styles.navMask} onClick={handleDropdownClick}></div>
-      )}
+      <button className={styles.burgerButton} onClick={handleDropdownClick}></button>
+      {openMenu && <div className={styles.navMask} onClick={handleDropdownClick}></div>}
       {openMenu && (
         <div className={styles.dropdown}>
+          <button className={styles.dropdownButton} onClick={handleHomeClick}>
+            Home
+          </button>
           <button className={styles.dropdownButton} onClick={handleAboutClick}>
             About
           </button>
@@ -68,10 +66,7 @@ const MobileNavBar = ({ props }) => {
           <button className={styles.dropdownButton} onClick={handleNewsClick}>
             News
           </button>
-          <button
-            className={styles.dropdownButton}
-            onClick={handleContactClick}
-          >
+          <button className={styles.dropdownButton} onClick={handleContactClick}>
             Contact
           </button>
         </div>
@@ -80,4 +75,4 @@ const MobileNavBar = ({ props }) => {
   );
 };
 
-export default MobileNavBar;
+export default NavBar;

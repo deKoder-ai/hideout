@@ -1,10 +1,5 @@
-@font-face {
-  font-family: dechora;
-  src: url(../../assets/fonts/dechora-zone.ttf);
-}
-@font-face {
-  font-family: journal;
-  src: url(../../assets/fonts/journal.ttf);
+.page {
+  background-color: #1b1b1b;
 }
 .menuSelectors {
   left: 0;
@@ -14,7 +9,7 @@
 }
 .menuSelector {
   font-family: dechora;
-  font-size: 1.6rem;
+  font-size: 2rem;
   padding: 0rem 1.7rem;
   margin-top: 1rem;
   background-color: var(--beige);
@@ -23,11 +18,19 @@
   border: 2px solid black;
   color: #000000a9;
 }
-.menuSelector:focus {
+.tabSelected {
+  font-family: dechora;
+  font-size: 2rem;
+  padding: 0rem 1.7rem;
+  margin-top: 1rem;
+  width: 120px;
+  border-radius: 5px 25px 0px 0px;
+  color: #000000a9;
   outline: none;
   background-color: var(--red);
   color: white;
-  border: 2px solid black;
+  border: 2px solid var(--beige);
+  outline: 2px solid black;
 }
 .mains {
   z-index: 3;
@@ -41,37 +44,45 @@
   transform: translateX(-30px);
 }
 .menu {
-  margin-top: 1px;
+  margin-top: 2px;
   width: 100%;
   border-top: 2px solid var(--beige);
-  background-color: #1b1b1b;
-  z-index: 4;
+  z-index: 4000;
 }
 .menuH2 {
   font-family: journal;
-  font-size: 3rem;
+  font-size: 4.5rem;
   text-align: center;
+  margin-bottom: -1.5rem;
 }
-.menuPara {
+.menuItem {
+  position: relative;
   text-align: left;
   text-indent: 0px;
-  font-size: 0.8rem;
+  font-size: 1.4rem;
   border-top: 1px dotted var(--beige);
-  margin: 0rem 2rem;
-  padding: 0.5rem ;
+  margin: 1.5rem 3rem;
+  padding: 1rem 0.5rem 0.5rem 0.5rem;
 }
-.flex {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #1b1b1b;
+.price {
+  position: absolute;
+  right: 0.2rem;
+  bottom: -1.5rem;
+  font-size: 1.4rem;
+}
+.line {
+  width: calc(100% - 6rem);
+  margin: 0.5rem 3rem;
+  height: 2px;
+  border-bottom: 1px dotted var(--beige);
 }
 .top {
   background-color: var(--red);
   color: white;
   outline: 2px solid var(--beige);
-  padding: 0.1rem 2rem;
+  padding: 0.3rem 3rem;
+  font-size: 1.2rem;
   margin: 1rem 2rem 1.7rem 2rem;
   border-radius: 20px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.589);
 }

@@ -1,10 +1,11 @@
-import { useMediaQuery } from "react-responsive";
-import MobileSite from "./Mobile/MobileSite/MobileSite.jsx";
+import { useMediaQuery } from 'react-responsive';
+import MobileSite from './Mobile/MobileSite/MobileSite.jsx';
+import DesktopSite from './Desktop/DesktopSite/DesktopSite.jsx';
 
-import "./App.css";
-import "./reset.css";
+import './App.css';
+import './reset.css';
 
-const DesktopSite = () => <h1>Desktop Version</h1>;
+// const DesktopSite = () => <h1>Desktop Version</h1>;
 // const MobileSite = () => <h1>Mobile Version</h1>;
 
 function App() {

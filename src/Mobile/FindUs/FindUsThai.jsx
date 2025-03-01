@@ -1,14 +1,14 @@
-import { useEffect } from "react";
-import Map from "./Map";
-import styles from "./FindUs.module.css";
+import { useEffect } from 'react';
+import Map from './Map';
+import styles from './FindUs.module.css';
 
-const gMapsUrl = "https://maps.app.goo.gl/wyWQhVBCnvDWovod8";
+const gMapsUrl = 'https://maps.app.goo.gl/wyWQhVBCnvDWovod8';
 const handleDirectionsClick = () => {
-  window.open(gMapsUrl, "_blank").focus();
+  window.open(gMapsUrl, '_blank').focus();
 };
 function SetTitle() {
   useEffect(() => {
-    document.title = "เดอะฮับ | Find Us";
+    document.title = 'เดอะฮับ | Find Us';
   }, []);
 }
 
@@ -16,24 +16,21 @@ const FindUs = () => {
   SetTitle();
   return (
     <div className={styles.page}>
-      <div className={styles.flex}>
-        <h1 className={styles.h1}>HIDEOUT ARI BAR & RESTAURANT</h1>
+      <div className='flexCenter'>
+        <h1 className={styles.findUsH1}>HIDEOUT ARI - BAR & RESTAURANT</h1>
       </div>
-      <div className={styles.flex}>
+      <div className='flexCenter'>
         <Map />
       </div>
-      <div className={styles.flex}>
-        <button
-          className={styles.getDirections}
-          onClick={handleDirectionsClick}
-        >
+      <div className='flexCenter'>
+        <button className={styles.getDirections} onClick={handleDirectionsClick}>
           รับทิศทาง
         </button>
       </div>
       <div>
         <p className={styles.textCenter}>
-          ชั้น 5{" "}
-          <a href="https://www.facebook.com/thehubphaholari">
+          ชั้น 5{' '}
+          <a href='https://www.facebook.com/thehubphaholari'>
             <strong>@เดอะฮับ</strong>
           </a>
         </p>
@@ -43,14 +40,14 @@ const FindUs = () => {
         <br />
         <p className={styles.textCenter}>โทร. (+66) 085 085 1568</p>
         <p className={styles.textCenter}>
-          อีเมล:{" "}
-          <a href="mailto:hideout.ari@gmail.com">
+          อีเมล:{' '}
+          <a href='mailto:hideout.ari@gmail.com'>
             <strong>hideout.ari@gmail.com</strong>
           </a>
         </p>
         <p className={styles.textCenter}>
-          เฟสบุ๊ค:{" "}
-          <a href="https://www.facebook.com/people/Hideout-ARI/61553971927398/">
+          เฟสบุ๊ค:{' '}
+          <a href='https://www.facebook.com/people/Hideout-ARI/61553971927398/'>
             <strong>Hideout Ari</strong>
           </a>
         </p>

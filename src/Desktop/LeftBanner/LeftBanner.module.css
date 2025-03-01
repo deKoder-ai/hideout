@@ -1,0 +1,22 @@
+.container {
+  position: fixed;
+  top: 50px;
+  left: 0;
+  width: 270px;
+  height: calc(100vh - 50px - 35px);
+  background-color: var(--red);
+  border-left: 2px solid var(--beige);
+  border-right: 2px solid var(--beige);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 20px;
+}
+.banner {
+    transform: rotate(270deg);
+    color: black;
+    font-family: dechora;
+    font-size: calc(31vh - 5rem);
+    letter-spacing: 1rem;
+    text-shadow: -3px -3px 5px var(--beige-shadow);
+}
