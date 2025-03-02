@@ -77,6 +77,14 @@
   border-left: 1px solid var(--beige);
   border-bottom: 1px solid var(--beige);
   box-shadow: -5px 5px 7px #0000009f;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.2s ease-in-out;
+  visibility: hidden;
+}
+.dropdown.open {
+  visibility: visible;
+  max-height: 500px;
 }
 .dropdownButton {
   display: block;
@@ -96,6 +104,7 @@
   background-color: var(--red);
   box-shadow: 2px 2px 5px #0000007c;
   outline: none;
+  font-weight: 600;
 }
 .navMask {
   opacity: 0;

@@ -2,6 +2,7 @@ import Cocktail from '../../assets/img/cocktail-glass.svg';
 import Home from '../Home/Home.jsx';
 import About from '../About/About.jsx';
 import AboutThai from '../About/AboutThai.jsx';
+import Menu from '../Menu/Menu.jsx';
 import FindUs from '../FindUs/FindUs.jsx';
 import FindUsThai from '../FindUs/FindUsThai.jsx';
 import styles from './Page.module.css';
@@ -18,7 +19,7 @@ const Page = ({ props }) => {
           {props.page === 'home' && <Home />}
           {props.page === 'about' && props.language === 'english' && <About />}
           {props.page === 'about' && props.language === 'thai' && <AboutThai />}
-          {/* {props.page === 'menu' && <Menu />} */}
+          {props.page === 'menu' && <Menu />}
           {props.page === 'findUs' && props.language === 'english' && <FindUs />}
           {props.page === 'findUs' && props.language === 'thai' && <FindUsThai />}
           <div className={styles.spacer}></div>

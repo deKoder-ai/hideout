@@ -67,34 +67,33 @@ const NavBar = ({ props }) => {
         <button className={styles.burgerButton} onClick={handleDropdownClick}></button>
       </nav>
       {openMenu && <div className={styles.navMask} onClick={handleDropdownClick}></div>}
-      {openMenu && (
-        <div className={styles.dropdown}>
-          <button className={styles.dropdownButton} onClick={handleHomeClick}>
-            Home
-          </button>
-          <button className={styles.dropdownButton} onClick={handleAboutClick}>
-            About
-          </button>
-          <button className={styles.dropdownButton} onClick={handleMenuClick}>
-            Menu
-          </button>
-          <button className={styles.dropdownButton} onClick={handleFindUsClick}>
-            Find Us
-          </button>
-          <button className={styles.dropdownButton} onClick={handleEventsClick}>
-            Events
-          </button>
-          <button className={styles.dropdownButton} onClick={handleNewsClick}>
-            News
-          </button>
-          <button className={styles.dropdownButton} onClick={handleContactClick}>
-            Contact
-          </button>
-          <button className={styles.dropdownButton} onClick={handleLanguageChange}>
-            เปลี่ยนภาษา
-          </button>
-        </div>
-      )}
+
+      <div className={`${styles.dropdown} ${openMenu ? styles.open : ''}`}>
+        <button className={styles.dropdownButton} onClick={handleHomeClick}>
+          Home
+        </button>
+        <button className={styles.dropdownButton} onClick={handleAboutClick}>
+          About
+        </button>
+        <button className={styles.dropdownButton} onClick={handleMenuClick}>
+          Menu
+        </button>
+        <button className={styles.dropdownButton} onClick={handleFindUsClick}>
+          Find Us
+        </button>
+        <button className={styles.dropdownButton} onClick={handleEventsClick}>
+          Events
+        </button>
+        <button className={styles.dropdownButton} onClick={handleNewsClick}>
+          News
+        </button>
+        <button className={styles.dropdownButton} onClick={handleContactClick}>
+          Contact
+        </button>
+        <button className={styles.dropdownButton} onClick={handleLanguageChange}>
+          เปลี่ยนภาษา
+        </button>
+      </div>
     </>
   );
 };

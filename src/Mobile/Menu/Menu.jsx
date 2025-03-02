@@ -32,8 +32,6 @@ const Menu = () => {
     drinksClass = styles.tabSelected;
   };
 
-  if (type === 'mains') {
-  }
   return (
     <div className={styles.page}>
       <div className={styles.menuSelectors}>
