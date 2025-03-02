@@ -1,0 +1,39 @@
+.page {
+  width: 100%;
+}
+.findUsH1 {
+  margin: 1rem 1rem 0.5rem 1rem;
+  font-size: 2.8rem;
+  letter-spacing: 0.1rem;
+  font-family: dechora;
+
+}
+.map {
+  width: 85%;
+  height: 280px;
+  outline: 1px solid var(--red);
+  border-radius: 20px;
+}
+.getDirections {
+  margin: 1.7rem 0rem 3.1rem;
+  padding: 0.3rem 2rem;
+  font-family: aksItalic;
+  color: black;
+  font-size: 2.7rem;
+  letter-spacing: 0.07rem;
+  background-color: var(--beige);
+  outline: 2px solid var(--red);
+  border-radius: 20px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.322);
+}
+.textCenter {
+  font-family: aks;
+  text-align: center;
+  font-size: 2.7rem;
+  letter-spacing: 0.15rem;
+  line-height: 1.1;
+}
+.spacer {
+  width: 100%;
+  height: 50px;
+}

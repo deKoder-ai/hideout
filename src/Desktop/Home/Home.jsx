@@ -1,7 +1,13 @@
+import { useEffect } from 'react';
 import Slideshow from '../Slideshow/Slideshow.jsx';
-import styles from './Home.module.css';
 
+function SetTitle() {
+  useEffect(() => {
+    document.title = 'HIDEOUT | Home';
+  }, []);
+}
 const Home = () => {
+  SetTitle();
   return (
     <>
       <Slideshow />

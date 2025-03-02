@@ -1,83 +1,88 @@
-.slideshowContainer {
+.container {
   position: relative;
   width: 100%;
-  max-width: 600px;
-  margin: auto;
+  height: calc(100vh - 87px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.slideshow {
+  position: relative;
+  width: calc(100% - 5rem);
   overflow: hidden;
+  border: 4px solid var(--red);
+  outline: 3px solid var(--beige);
+  border-radius: 20px;
+  box-shadow: 5px 5px 11px black;
 }
 .slide {
   position: absolute;
   width: 100%;
   height: 100%;
   opacity: 0;
+  transform: scale(1.1);
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
-/* check this shit */
-.slide img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-/* fade transition */
-.fade {
-  opacity: 0;
-}
-.fade.transitioning {
+.active {
   opacity: 1;
-  transition: opacity 0.5s ease-in-out;
+  transform: scale(1); /* Zoom back in when active */
 }
-
-/* slide transition */
-.slide.slideLeft {
-  transform: translateX(100%);
-}
-.slide.slideRight {
-  transform: translateX(-100%);
-}
-.slide.transitioning {
-  transform: translateX(0);
-}
-
-/* controls (prev, next buttons */
-.controls {
+.ssButton {
+  width: 40px;
+  height: 40px;
+  border-radius: 100px;
+  background-color: #0000008c;
+  border: 2px solid white;
   position: absolute;
   top: 50%;
-  left: 0;
-  right: 0;
-  display: flex;
-  justify-content: space-between;
   transform: translateY(-50%);
-  padding: 0 10px;
+  font-family: poppins, system-ui, sans-serif;
+  font-size: 2rem;
+  background-repeat: no-repeat;
+  background-size: 90%;
+  box-shadow: 3px 3px 5px #0000008a;
+}
+.back {
+  left: 5px;
+  background-image: url(../../assets/img/chevrons-left-thick.svg);
+  background-position: 25% center;
+}
+.forward {
+  right: 5px;
+  background-image: url(../../assets/img/chevrons-right-thick.svg);
+  background-position: 75% center;
+}
+.ssButton:hover,
+.ssButton:focus {
+  background-color: #000000c9;
 }
 
-button {
-  background-color: rgba(0,0,0,0.5);
-  color: white;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-}
-button:hover {
-  background-color: rgba(0,0,0,0.8);
-}
-
-/* dots navigation */
+/* Dot Navigation */
 .dots {
   position: absolute;
-  bottom: 10px;
+  bottom: 11px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
-  justify-content: center;
-  gap: 5px;
+  gap: 11px;
 }
 .dot {
-  width: 10px;
-  height: 10px;
-  background-color: rgba(255, 255,255, 0.5);
+  width: 12px;
+  height: 12px;
+  background-color: rgba(255, 255, 255, 0.5);
   border-radius: 50%;
   cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.74);
 }
-.dot.active {
+.dot:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+  outline: 2px solid var(--red);
+}
+.activeDot {
   background-color: white;
+  transform: scale(1);
+  outline: 2px solid var(--red);
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.829);
 }
+

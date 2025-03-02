@@ -1,0 +1,35 @@
+.logo {
+  margin: 1rem;
+  margin-top: 4rem;
+  width: 400px;
+  height: 230px;
+  border-radius: 23px;
+  box-shadow: 3px 3px 5px #00000015;
+  border-radius: 100px;
+  outline: 2px solid var(--beige);
+  box-shadow: 5px 5px 11px rgba(0, 0, 0, 0.425);
+}
+.aboutHead {
+  text-indent: 3rem;
+  font-family: aksItalic;
+  text-align: center;
+  font-size: 5.5rem;
+  line-height: 1;
+  margin: 3rem 12rem;
+  letter-spacing: 0.1rem;
+  text-align: center;
+}
+.para {
+  font-family: aks;
+  font-size: 2.6rem;
+  text-indent: 4rem;
+  padding: 0.7rem 10rem;
+  letter-spacing: 0.12rem;
+}
+.glass {
+  width: 20%;
+  height: auto;
+  margin: 5rem;
+  margin-bottom: 6rem;
+  filter: contrast(114%);
+}

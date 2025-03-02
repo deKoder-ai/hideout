@@ -9,6 +9,14 @@
   font-family: journal;
   src: url(./assets/fonts/journal.ttf);
 }
+@font-face {
+  font-family: aks;
+  src: url(./assets/fonts/AksaramateeBold.ttf);
+}
+@font-face {
+  font-family: aksItalic;
+  src: url(./assets/fonts/AksaramateeBoldItalic.ttf);
+}
 
 :root {
   /* font-family: system-ui, Avenir, Helvetica, Arial, sans-serif; */
@@ -43,12 +51,13 @@ html {
 }
 
 a {
-  font-weight: 500;
+  font-weight: 400;
   color: var(--red);
   text-decoration: none;
 }
 a:hover {
   color: var(--red);
+  font-weight: 500;
   text-decoration: underline;
 }
 button:hover {

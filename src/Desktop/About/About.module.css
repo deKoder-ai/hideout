@@ -2,7 +2,7 @@
   margin: 1rem;
   margin-top: 4rem;
   width: 400px;
-  height: auto;
+  height: 230px;
   border-radius: 23px;
   box-shadow: 3px 3px 5px #00000015;
   border-radius: 100px;
@@ -29,5 +29,5 @@
   height: auto;
   margin: 5rem;
   margin-bottom: 6rem;
-  filter: contrast(110%);
+  filter: contrast(114%);
 }

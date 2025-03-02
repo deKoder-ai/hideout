@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import Map from './Map';
-import styles from './FindUs.module.css';
+import styles from './FindUsThai.module.css';
 
 const gMapsUrl = 'https://maps.app.goo.gl/wyWQhVBCnvDWovod8';
 const handleDirectionsClick = () => {
@@ -37,6 +37,7 @@ const FindUs = () => {
         <p className={styles.textCenter}>466/1-39 ถนนพหลโยธิน</p>
         <p className={styles.textCenter}>อารีย์ เขตพญาไท</p>
         <p className={styles.textCenter}>กทม 10400</p>
+        <br />
         <br />
         <p className={styles.textCenter}>โทร. (+66) 085 085 1568</p>
         <p className={styles.textCenter}>

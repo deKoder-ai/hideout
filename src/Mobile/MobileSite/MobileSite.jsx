@@ -16,13 +16,14 @@ const MobileSite = () => {
     <>
       <NavBar props={{ page, setPage }} />
       <div className={styles.spacer}></div>
-      {page === 'home' && <Home />}
-      {page === 'about' && language === 'english' && <About />}
-      {page === 'about' && language === 'thai' && <AboutThai />}
-      {page === 'menu' && language === 'english' && <Menu />}
-      {page === 'findUs' && language === 'english' && <FindUs />}
-      {page === 'findUs' && language === 'thai' && <FindUsThai />}
-      {/* <h1>{page}</h1> */}
+      <div className={styles.container}>
+        {page === 'home' && <Home />}
+        {page === 'about' && language === 'english' && <About />}
+        {page === 'about' && language === 'thai' && <AboutThai />}
+        {page === 'menu' && language === 'english' && <Menu />}
+        {page === 'findUs' && language === 'english' && <FindUs />}
+        {page === 'findUs' && language === 'thai' && <FindUsThai />}
+      </div>
       <div className={styles.spacerFooter}></div>
       <Footer props={{ language, setLanguage }} />
     </>

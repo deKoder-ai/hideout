@@ -2,9 +2,14 @@
   position: fixed;
   top: 50px;
   left: 0;
-  width: 270px;
+  width: 240px;
   height: calc(100vh - 50px - 35px);
+  background-image: url(../../assets/img/left1.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   background-color: var(--red);
+  background-blend-mode: darken;
   border-left: 2px solid var(--beige);
   border-right: 2px solid var(--beige);
   display: flex;
@@ -19,5 +24,9 @@
   font-family: dechora;
   font-size: calc(31vh - 5rem);
   letter-spacing: 1rem;
-  text-shadow: -3px -3px 5px var(--beige-shadow);
+  text-shadow: -3px -3px 10px var(--beige-shadow),
+    3px 3px 1px rgba(0, 0, 0, 0.7),
+    -3px 3px 1px rgba(0, 0, 0, 0.7),
+    3px -3px 1px rgba(0, 0, 0, 0.7),
+    -3px -3px 1px rgba(0, 0, 0, 0.7);
 }

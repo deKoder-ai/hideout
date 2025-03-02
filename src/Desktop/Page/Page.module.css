@@ -1,9 +1,9 @@
 .page {
   margin-top: 50px;
-  margin-left: 270px;
+  margin-left: 240px;
   top: 50px;
-  left: 270px;
-  width: calc(100vw - 270px);
+  left: 240px;
+  width: calc(100vw - 240px);
   min-height: calc(100vh - 50px - 75px);
   display: grid;
   grid-template-columns: 1fr 5fr 1fr;
@@ -24,7 +24,13 @@
   padding: 10px;
 }
 .content {
-  background-image: linear-gradient(0deg, #201f1f, #141414);
+  position: relative;
+  background-image: url(../../assets/img/bcgNouveau.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgba(20, 20, 20, 0.842);
+  background-blend-mode: darken;
   margin: 1px 0px;
   box-shadow: 5px 0px 11px rgba(0, 0, 0, 0.5),
     -5px 0px 11px rgba(0, 0, 0, 0.5);

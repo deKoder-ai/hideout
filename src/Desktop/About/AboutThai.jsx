@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import Logo from '../../assets/img/ho-logo-sm.jpg';
 import Glass from '../../assets/img/cocktail-glass.svg';
-import styles from './About.module.css';
+import styles from './AboutThai.module.css';
 
 function SetTitle() {
   useEffect(() => {

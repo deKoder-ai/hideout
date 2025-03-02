@@ -1,67 +1,78 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
+import images from './landscape.js';
 import styles from './Slideshow.module.css';
 
-const Slideshow = ({ images, transitionType = 'fade', autoPlayTime = 5000 }) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [transitioning, setTransitioning] = useState(false);
+const Slideshow = () => {
+  const [slide, setSlide] = useState(0);
+  const [containerHeight, setContainerHeight] = useState(0);
+  const slideshowRef = useRef(null);
 
-  const nextSlide = () => {
-    if (transitioning) return;
-    setTransitioning(true);
-    setTimeout(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-      setTransitioning(false);
-    }, 5000);
+  // Function to update height based on width
+  const updateHeight = () => {
+    if (slideshowRef.current) {
+      const width = slideshowRef.current.clientWidth;
+      setContainerHeight(width * 0.67); // Example: 16:9 ratio (adjust as needed)
+      // setContainerHeight(width * 0.5625); // Example: 16:9 ratio (adjust as needed)
+    }
   };
+
+  useEffect(() => {
+    updateHeight(); // Set initial height
+    window.addEventListener('resize', updateHeight);
+    return () => window.removeEventListener('resize', updateHeight);
+  }, []);
 
   const prevSlide = () => {
-    if (transitioning) return;
-    setTransitioning(true);
-    setTimeout(() => {
-      setCurrentIndex((prevIndex) =>
-        prevIndex === 0 ? images.length - 1 : prevIndex - 1
-      );
-      setTransitioning(false);
-    }, 5000);
+    setSlide((prev) => (prev - 1 + images.length) % images.length);
   };
-  const jumpToSlide = (index) => {
-    if (transitioning) return;
-    setTransitioning(true);
-    setTimeout(() => {
-      setCurrentIndex(index);
-      setTransitioning(false);
-    }, 5000);
+
+  const nextSlide = () => {
+    setSlide((prev) => (prev + 1) % images.length);
   };
+
+  // Auto-slide every 3 seconds
   useEffect(() => {
-    const interval = setInterval(nextSlide, autoPlayTime);
+    const interval = setInterval(nextSlide, 7000);
     return () => clearInterval(interval);
-  }, [autoPlayTime]);
+  }, [slide]);
+
   return (
-    <div className={styles.slideshowContainer}>
-      <div
-        className={`${styles.slide} ${transitionType} ${
-          transitioning ? `transitioning` : ''
-        }`}
-      >
-        <img src={images[currentIndex]} alt='' />
-      </div>
-      <div className={styles.controls}>
-        {/* Previous Button */}
-        <button onClick={prevSlide}>&lt;</button>
-        {/* Dots */}
-        <div className={styles.dots}>
-          {images.map((_, index) => (
-            <span
+    <>
+      <div className={styles.container}>
+        <div
+          className={styles.slideshow}
+          ref={slideshowRef}
+          style={{ height: `${containerHeight}px` }}
+        >
+          {images.map((src, index) => (
+            <img
               key={index}
-              className={`dot ${index === currentIndex ? 'active' : ''}`}
-              onClick={() => jumpToSlide(index)}
+              src={src}
+              alt=''
+              className={`${styles.slide} ${index === slide ? styles.active : ''}`}
             />
           ))}
+          <button
+            className={`${styles.back} ${styles.ssButton}`}
+            onClick={prevSlide}
+          ></button>
+          <button
+            className={`${styles.forward} ${styles.ssButton}`}
+            onClick={nextSlide}
+          ></button>
+          {/* Dot Navigation */}
+          <div className={styles.dots}>
+            {images.map((_, index) => (
+              <span
+                key={index}
+                className={`${styles.dot} ${index === slide ? styles.activeDot : ''}`}
+                onClick={() => setSlide(index)}
+              ></span>
+            ))}
+          </div>
         </div>
-        {/* Next Button */}
-        <button onClick={nextSlide}>&gt;</button>
       </div>
-    </div>
+    </>
   );
 };
 
