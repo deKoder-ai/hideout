@@ -8,7 +8,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid var(--beige);
+  border-bottom: 2px solid var(--beige);
   z-index: 999999;
 }
 .homeButton {
@@ -79,4 +79,12 @@
   translate: transformX(1px);
   transform: translateY(-1px);
   box-shadow: -5px 5px 7px #0000009f;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.2s ease-in-out;
+  visibility: hidden;
+}
+.dropdown.open {
+  visibility: visible;
+  max-height: 500px;
 }

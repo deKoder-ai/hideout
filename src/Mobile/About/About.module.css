@@ -1,13 +1,9 @@
 .logo {
-  margin: 1rem;
+  margin-bottom: -0.3rem;
   margin-top: 2rem;
   width: 230px;
   height: auto;
-  border-radius: 23px;
-  box-shadow: 3px 3px 5px #00000015;
-  border-radius: 70px;
-  outline: 2px solid var(--beige);
-  box-shadow: 5px 5px 11px rgba(0, 0, 0, 0.425);
+
 }
 .aboutHead {
   text-indent: 2rem;
@@ -23,6 +19,7 @@
   font-size: 1.4rem;
   text-indent: 2rem;
   padding: 0.7rem 5rem;
+  text-align: center;
 }
 .glass {
   width: 30%;

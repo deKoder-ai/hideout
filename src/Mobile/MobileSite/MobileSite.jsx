@@ -14,7 +14,7 @@ const MobileSite = () => {
   const [language, setLanguage] = useState('english');
   return (
     <>
-      <NavBar props={{ page, setPage }} />
+      <NavBar props={{ page, setPage, language, setLanguage }} />
       <div className={styles.spacer}></div>
       <div className={styles.container}>
         {page === 'home' && <Home />}

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import styles from './NavBar.module.css';
 
 const NavBar = ({ props }) => {
@@ -39,6 +39,25 @@ const NavBar = ({ props }) => {
     props.setPage('contact');
     setOpenMenu(false);
   };
+  const handleLanguageChange = () => {
+    if (props.language === 'english') {
+      props.setLanguage('thai');
+      setOpenMenu(false);
+    } else {
+      props.setLanguage('english');
+      setOpenMenu(false);
+    }
+  };
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (event.key === 'Escape') {
+        setOpenMenu(false);
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, []);
   return (
     <nav className={styles.mobileNav}>
       <button className={styles.homeButton} onClick={handleHomeClick}>
@@ -46,31 +65,32 @@ const NavBar = ({ props }) => {
       </button>
       <button className={styles.burgerButton} onClick={handleDropdownClick}></button>
       {openMenu && <div className={styles.navMask} onClick={handleDropdownClick}></div>}
-      {openMenu && (
-        <div className={styles.dropdown}>
-          <button className={styles.dropdownButton} onClick={handleHomeClick}>
-            Home
-          </button>
-          <button className={styles.dropdownButton} onClick={handleAboutClick}>
-            About
-          </button>
-          <button className={styles.dropdownButton} onClick={handleMenuClick}>
-            Menu
-          </button>
-          <button className={styles.dropdownButton} onClick={handleFindUsClick}>
-            Find Us
-          </button>
-          <button className={styles.dropdownButton} onClick={handleEventsClick}>
-            Events
-          </button>
-          <button className={styles.dropdownButton} onClick={handleNewsClick}>
-            News
-          </button>
-          <button className={styles.dropdownButton} onClick={handleContactClick}>
-            Contact
-          </button>
-        </div>
-      )}
+      <div className={`${styles.dropdown} ${openMenu ? styles.open : ''}`}>
+        <button className={styles.dropdownButton} onClick={handleHomeClick}>
+          Home
+        </button>
+        <button className={styles.dropdownButton} onClick={handleAboutClick}>
+          About
+        </button>
+        <button className={styles.dropdownButton} onClick={handleMenuClick}>
+          Menu
+        </button>
+        <button className={styles.dropdownButton} onClick={handleFindUsClick}>
+          Find Us
+        </button>
+        <button className={styles.dropdownButton} onClick={handleEventsClick}>
+          Events
+        </button>
+        <button className={styles.dropdownButton} onClick={handleNewsClick}>
+          News
+        </button>
+        <button className={styles.dropdownButton} onClick={handleContactClick}>
+          Contact
+        </button>
+        <button className={styles.dropdownButton} onClick={handleLanguageChange}>
+          เปลี่ยนภาษา
+        </button>
+      </div>
     </nav>
   );
 };

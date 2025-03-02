@@ -49,6 +49,7 @@
 }
 .category {
   font-family: journal;
+  letter-spacing: 0.15rem;
   font-size: 5.5rem;
   margin-left: 9rem;
   color: #ffffffde;
@@ -91,7 +92,6 @@
   align-items: center;
 }
 .top {
-  /* font-family: dechora; */
   font-size: 1.7rem;
   font-weight: 500;
   padding: 0 3rem;
@@ -103,7 +103,3 @@
   border-radius: 11px;
   box-shadow: 5px 5px 7px black;
 }
-
-/* fix mobile menu */
-/* add slide effect to mobile */
-/* investigate pushing to server */

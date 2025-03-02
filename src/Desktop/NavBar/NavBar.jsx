@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import styles from './NavBar.module.css';
 
 const NavBar = ({ props }) => {
@@ -48,6 +48,16 @@ const NavBar = ({ props }) => {
       setOpenMenu(false);
     }
   };
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (event.key === 'Escape') {
+        setOpenMenu(false);
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, []);
   return (
     <>
       <nav className={styles.desktopNav}>
