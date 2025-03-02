@@ -3,7 +3,9 @@
   height: calc(100vh - 85px);
 }
 .logo {
+  position: relative;
   width: 80%;
   height: auto;
   margin: auto;
+  z-index: 2000;
 }

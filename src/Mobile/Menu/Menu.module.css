@@ -58,11 +58,12 @@
 .menuItem {
   position: relative;
   font-size: 1.3rem;
-  margin: 2rem 5rem 0rem 5rem;
+  /* margin: 2rem 5rem 0rem 5rem; */
+  margin: 2rem 12% 0rem 12%;
   display: inline-block;
   padding-bottom: 2rem;
   border-bottom: 1px dotted var(--beige);
-  width: calc(100% - 10rem);
+  width: 76%;
 }
 .name {
   color: var(--beige);
@@ -76,7 +77,6 @@
   font-weight: 400;
   text-decoration: none;
   margin-left: 0.5rem;
-  margin-right: 10rem;  width: 80%;
 }
 .price {
   font-size: 1.6rem;
@@ -93,7 +93,7 @@
 }
 .top {
   font-size: 1.7rem;
-  font-weight: 500;
+  font-weight: 600;
   padding: 0 3rem;
   letter-spacing: 0.15rem;
   background-color: var(--beige);

@@ -27,7 +27,11 @@ const FindUs = () => {
       <div className={styles.container}>
         <p className={styles.textCenter}>
           5th Floor{' '}
-          <a href='https://www.facebook.com/thehubphaholari'>
+          <a
+            href='https://www.facebook.com/thehubphaholari'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
             <strong>@The Hub</strong>
           </a>
         </p>
@@ -45,7 +49,11 @@ const FindUs = () => {
         </p>
         <p className={styles.textCenter}>
           Facebook:{' '}
-          <a href='https://www.facebook.com/people/Hideout-ARI/61553971927398/'>
+          <a
+            href='https://www.facebook.com/people/Hideout-ARI/61553971927398/'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
             <strong>Hideout Ari</strong>
           </a>
         </p>

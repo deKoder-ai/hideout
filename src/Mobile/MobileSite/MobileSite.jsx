@@ -15,7 +15,13 @@ const MobileSite = () => {
   return (
     <>
       <NavBar props={{ page, setPage, language, setLanguage }} />
-      <div className={styles.spacer}></div>
+      <div className={styles.spacer}>
+        <p className={styles.a}>a</p>
+        <p className={styles.b}>a</p>
+        <p className={styles.c}>a</p>
+        <p className={styles.d}>a</p>
+        <p className={styles.e}>a</p>
+      </div>
       <div className={styles.container}>
         {page === 'home' && <Home />}
         {page === 'about' && language === 'english' && <About />}

@@ -30,7 +30,11 @@ const FindUs = () => {
       <div>
         <p className={styles.textCenter}>
           ชั้น 5{' '}
-          <a href='https://www.facebook.com/thehubphaholari'>
+          <a
+            href='https://www.facebook.com/thehubphaholari'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
             <strong>@เดอะฮับ</strong>
           </a>
         </p>
@@ -48,7 +52,11 @@ const FindUs = () => {
         </p>
         <p className={styles.textCenter}>
           เฟสบุ๊ค:{' '}
-          <a href='https://www.facebook.com/people/Hideout-ARI/61553971927398/'>
+          <a
+            href='https://www.facebook.com/people/Hideout-ARI/61553971927398/'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
             <strong>Hideout Ari</strong>
           </a>
         </p>

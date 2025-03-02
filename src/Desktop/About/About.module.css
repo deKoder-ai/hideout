@@ -10,14 +10,16 @@
   text-align: center;
   font-size: 5rem;
   line-height: 1;
-  margin: 3rem 12rem;
+  margin: 3rem 15%;
+  /* margin: 3rem 12rem; */
   letter-spacing: 0.1rem;
   text-align: center;
 }
 .para {
   font-size: 1.6rem;
   text-indent: 4rem;
-  padding: 0.7rem 10rem;
+  /* padding: 0.7rem 10rem; */
+  padding: 0.7rem 10%;
 }
 .glass {
   width: 20%;

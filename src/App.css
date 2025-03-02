@@ -3,19 +3,19 @@
 
 @font-face {
   font-family: dechora;
-  src: url(./assets/fonts/dechora-zone.ttf);
+  src: url(./assets/fonts/dechora-zone.woff2) format('woff2');
 }
 @font-face {
   font-family: journal;
-  src: url(./assets/fonts/journal.ttf);
+  src: url(./assets/fonts/journal.woff2) format('woff2');
 }
 @font-face {
   font-family: aks;
-  src: url(./assets/fonts/AksaramateeBold.ttf);
+  src: url(./assets/fonts/AksaramateeBold.woff2) format('woff2');
 }
 @font-face {
   font-family: aksItalic;
-  src: url(./assets/fonts/AksaramateeBoldItalic.ttf);
+  src: url(./assets/fonts/AksaramateeBoldItalic.woff2) format('woff2');
 }
 
 :root {

@@ -51,18 +51,18 @@
   font-family: journal;
   letter-spacing: 0.15rem;
   font-size: 5.5rem;
-  margin-left: 9rem;
+  margin-left: 7%;
   color: #ffffffde;
   margin-bottom: -2rem;
 }
 .menuItem {
   position: relative;
   font-size: 1.4rem;
-  margin: 2rem 12.5rem 0rem 12.5rem;
+  margin: 2rem 10% 0rem 10%;
   display: inline-block;
   padding-bottom: 2rem;
   border-bottom: 1px dotted var(--beige);
-  width: calc(100% - 25rem);
+  width: 80%;
 }
 .name {
   color: var(--beige);
